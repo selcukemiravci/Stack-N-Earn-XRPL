@@ -1,110 +1,22 @@
-# react-tetris
+# Stack-N-Earn XRPL
 
-![Build Status](https://github.com/brandly/react-tetris/workflows/.github/workflows/test.yml/badge.svg)
+Stack-N-Earn XRPL is a Tetris-like game that integrates with the XRP Ledger, allowing players to earn XRP as they score points in the game. It's built with React for the frontend and a Node.js server to handle XRP transfers on the XRPL Testnet.
 
-> Embed a game of Tetris in your React app
+## Overview
 
-```shell
-$ npm install --save react-tetris
-```
+The game rewards players with XRP based on their score. Players enter their XRPL Testnet wallet address, play the game, and can claim their earned XRP, which is then transferred to the provided wallet address.
 
-[view demo](https://brandly.github.io/react-tetris/)
+## Installation
 
-## usage
+To set up the Stack-N-Earn XRPL project, follow these steps:
 
-```js
-const React = require('react');
-const Tetris = require('react-tetris');
+### Prerequisites
 
-const App = () => (
-  <div>
-    <h1>Tetris</h1>
-    <Tetris
-      keyboardControls={{
-        // Default values shown here. These will be used if no
-        // `keyboardControls` prop is provided.
-        down: 'MOVE_DOWN',
-        left: 'MOVE_LEFT',
-        right: 'MOVE_RIGHT',
-        space: 'HARD_DROP',
-        z: 'FLIP_COUNTERCLOCKWISE',
-        x: 'FLIP_CLOCKWISE',
-        up: 'FLIP_CLOCKWISE',
-        p: 'TOGGLE_PAUSE',
-        c: 'HOLD',
-        shift: 'HOLD'
-      }}
-    >
-      {({
-        HeldPiece,
-        Gameboard,
-        PieceQueue,
-        points,
-        linesCleared,
-        state,
-        controller
-      }) => (
-        <div>
-          <HeldPiece />
-          <div>
-            <p>Points: {points}</p>
-            <p>Lines Cleared: {linesCleared}</p>
-          </div>
-          <Gameboard />
-          <PieceQueue />
-          {state === 'LOST' && (
-            <div>
-              <h2>Game Over</h2>
-              <button onClick={controller.restart}>New game</button>
-            </div>
-          )}
-        </div>
-      )}
-    </Tetris>
-  </div>
-);
-```
+- Node.js and npm (Node Package Manager)
+- An XRPL Testnet wallet address
 
-include some styles
+### Setup
 
-```css
-.game-block {
-  margin: 0;
-  padding: 0;
-  width: 1.5em;
-  height: 1.5em;
-  border: 1px solid #ddd;
-}
-.piece-i {
-  background-color: #ec858b;
-}
-.piece-j {
-  background-color: #f1b598;
-}
-.piece-l {
-  background-color: #f8efae;
-}
-.piece-o {
-  background-color: #b5a677;
-}
-.piece-s {
-  background-color: #816e56;
-}
-.piece-t {
-  background-color: #b77c72;
-}
-.piece-z {
-  background-color: #e3be58;
-}
-.piece-preview {
-  background-color: #eee;
-}
-```
-
-## dev
-
-```shell
-$ npm run build
-$ npm run watch
-$ npm test
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/stack-n-earn-xrpl.git

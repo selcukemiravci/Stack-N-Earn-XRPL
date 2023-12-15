@@ -14,9 +14,3 @@ To set up the Stack-N-Earn XRPL project, follow these steps:
 
 - Node.js and npm (Node Package Manager)
 - An XRPL Testnet wallet address
-
-### Setup
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/stack-n-earn-xrpl.git
